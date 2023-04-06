@@ -12,19 +12,25 @@ public class Artikal {
 	public String getNaziv() {
 		return naziv;
 	}
-	public void setNaziv(String naziv) {
+	public void setNaziv(String naziv) throws Exception {
+		if(naziv.isEmpty())
+			throw new Exception("Prazan string");
 		this.naziv = naziv;
 	}
 	public String getOpis() {
 		return opis;
 	}
-	public void setOpis(String opis) {
+	public void setOpis(String opis) throws Exception {
+		if(opis.isEmpty())
+			throw new Exception("Prazan string");
 		this.opis = opis;
 	}
 	public int getSifra() {
 		return sifra;
 	}
-	public void setSifra(int sifra) {
+	public void setSifra(int sifra) throws Exception {
+		if(sifra <= 0)
+			throw new Exception("Negativna vrednost");
 		this.sifra = sifra;
 	}
 	public int getKolicina() {

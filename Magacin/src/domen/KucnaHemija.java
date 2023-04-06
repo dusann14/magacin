@@ -15,5 +15,21 @@ public class KucnaHemija extends Artikal{
 	}
 	
 	
+	public String toString() {
+		return super.toString() + "KucnaHemija [rokTrajanja=" + rokTrajanja + "]";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
+	}
+	
 	
 }

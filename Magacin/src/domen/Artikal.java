@@ -1,5 +1,7 @@
 package domen;
 
+import java.util.Objects;
+
 public class Artikal {
 	
 	private String naziv,opis;
@@ -31,6 +33,27 @@ public class Artikal {
 	public void setKolicina(int kolicina) {
 		this.kolicina = kolicina;
 	}
+	@Override
+	public String toString() {
+		return "Artikal [naziv=" + naziv + ", opis=" + opis + ", sifra=" + sifra + ", kolicina=" + kolicina + "]";
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(kolicina, naziv, opis, sifra);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Artikal other = (Artikal) obj;
+		return kolicina == other.kolicina && Objects.equals(naziv, other.naziv) && Objects.equals(opis, other.opis)
+				&& sifra == other.sifra;
+	}
+	
 	
 	
 }
